@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Playwrite CU Guides font */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 
+      'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Dark mode only */
+  .dark {
+    color-scheme: dark;
+  }
+
+  /* Background gradient */
+  .bg-dark-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  /* Frosted Glass Effect - LESS TRANSPARENT, more visible */
+  .frosted-glass {
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    background: linear-gradient(
+      135deg,
+      rgba(25, 30, 40, 0.85) 0%,  /* Increased from 0.65 to 0.85 */
+      rgba(20, 25, 35, 0.9) 100%   /* Increased from 0.75 to 0.9 */
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.7),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  }
+
+  /* Playwrite font class */
+  .font-playwrite {
+    font-family: 'Playwrite CU Guides', cursive;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.25s ease-out;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-bounce {
+    animation: bounce 0.5s infinite;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  /* Smooth transitions */
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .pointer-events-none {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,15 @@
+
+> desktop-assistant@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> desktop-assistant@0.1.0 build
+> tsc && vite build
+
+src/App.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/ChatInterface.tsx(21,18): error TS6133: 'setTimers' is declared but its value is never read.
+src/components/ChatInterface.tsx(438,47): error TS6133: 'index' is declared but its value is never read.
+src/components/CommandsList.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/HelpDropdown.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+       Error beforeBuildCommand `npm run build` failed with exit code 2
