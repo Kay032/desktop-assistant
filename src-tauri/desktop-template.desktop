@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Seeker
+Comment=Desktop automation and search tool
+Exec=/usr/bin/seeker
+Icon=seeker
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=true
